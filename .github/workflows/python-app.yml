@@ -26,7 +26,5 @@ jobs:
         pip install notebook
     - name: Change ipynb to py
       run: jupyter nbconvert --to python train.ipynb
-    - name: Setup cuda
-      uses: Jimver/cuda-toolkit@v0.2.8
     - name: Build model
       run: python3 train.py
