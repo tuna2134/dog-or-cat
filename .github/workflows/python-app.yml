@@ -23,8 +23,8 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install notebook
-    - name: Change ipynb to py
-      run: jupyter nbconvert --to python train.ipynb
+        sh build.sh
+    - name: Build Image
+      run: python3 src/image.py
     - name: Build model
-      run: ipython train.py
+      run: python3 src/model.py
