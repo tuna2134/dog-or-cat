@@ -27,4 +27,4 @@ jobs:
     - name: Change ipynb to py
       run: jupyter nbconvert --to python train.ipynb
     - name: Build model
-      run: python3 train.py
+      run: ipython train.py
